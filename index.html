@@ -1585,8 +1585,8 @@ footer {
 .portfolio-section,.services,.about,.contact{position:relative;overflow:hidden;}
 .portfolio-section::before,.services::before,.about::before,.contact::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at top, rgba(255,255,255,.04), transparent 60%);opacity:0;transition:opacity .8s ease;pointer-events:none;}
 .portfolio-section.visible::before,.services.visible::before,.about.visible::before,.contact.visible::before{opacity:1;}
-.portfolio-section,.services,.about,.contact{transform:scale(.98);opacity:.4;filter:blur(8px);transition:transform 1.2s cubic-bezier(.16,1,.3,1),opacity 1s ease,filter 1.2s ease;}
-.portfolio-section.visible,.services.visible,.about.visible,.contact.visible{transform:scale(1);opacity:1;filter:blur(0px);}
+.portfolio-section,.services,.about,.contact{transform:scale(.98);opacity:.4;transition:transform 1.2s cubic-bezier(.16,1,.3,1),opacity 1s ease;}
+.portfolio-section.visible,.services.visible,.about.visible,.contact.visible{transform:scale(1);opacity:1;}
 
 /* SOFT MOTION BLUR */
 .masonry-item img,.gallery-item img,.hero-media img,.hero-media video{transition:transform 1.4s cubic-bezier(.16,1,.3,1),filter .8s ease;will-change:transform;}
@@ -1634,7 +1634,7 @@ footer {
      ============================ -->
 <section class="hero">
   <div class="hero-media">
-    <img src="img/hero.webp" alt="Johan Alegria fotografía deportiva" loading="eager">
+    <img src="img/hero.webp" alt="Johan Alegria fotograf�a deportiva en Santiago" loading="eager" fetchpriority="high" width="1920" height="1080">
   </div>
 
   <!-- CONTENT -->
@@ -1802,7 +1802,7 @@ footer {
     <!-- ══ 01 DEPORTE ══ 13 fotos, 4-col grid con hero -->
     <div class="port-panel active" id="panel-deporte" role="tabpanel">
       <div class="pp-grid">
-        <div class="pp-item pp-tall"><img src="img/port-sprint.webp"     alt="Atletismo meta" loading="lazy"><div class="item-grain"></div><div class="pp-overlay"><p class="item-cat">Atletismo · Campeonato</p><p class="item-title">Velocidad & Pasión</p></div></div>
+        <div class="pp-item pp-tall"><img src="img/port-sprint.webp"     alt="Johan Alegria fotograf�a atletismo campeonato nacional Santiago" loading="lazy"><div class="item-grain"></div><div class="pp-overlay"><p class="item-cat">Atletismo · Campeonato</p><p class="item-title">Velocidad & Pasión</p></div></div>
         <div class="pp-item pp-portrait"><img src="img/port-chalk.webp"  alt="Atleta en blocks" loading="lazy"><div class="item-grain"></div><div class="pp-overlay"><p class="item-cat">Entrenamiento</p><p class="item-title">En el Límite</p></div></div>
         <div class="pp-item"><img src="img/port-highjump.webp"           alt="Vallas" loading="lazy"><div class="item-grain"></div><div class="pp-overlay"><p class="item-cat">Atletismo · Vallas</p><p class="item-title">La Fracción Decisiva</p></div></div>
         <div class="pp-item pp-portrait"><img src="img/port-marathon.webp" alt="Meta maratón" loading="lazy"><div class="item-grain"></div><div class="pp-overlay"><p class="item-cat">Maratón · Meta</p><p class="item-title">El Triunfo</p></div></div>
@@ -1812,7 +1812,7 @@ footer {
         <div class="pp-item pp-portrait"><img src="img/port-marathon-2.webp" alt="Dos corredores" loading="lazy"><div class="item-grain"></div><div class="pp-overlay"><p class="item-cat">Maratón · Calle</p><p class="item-title">Juntos a la Meta</p></div></div>
         <div class="pp-item"><img src="img/port-football-2.webp"         alt="Remate fútbol" loading="lazy"><div class="item-grain"></div><div class="pp-overlay"><p class="item-cat">Fútbol · Acción</p><p class="item-title">Fútbol Puro</p></div></div>
         <div class="pp-item pp-portrait"><img src="img/port-runner.webp" alt="Corredor retrato" loading="lazy"><div class="item-grain"></div><div class="pp-overlay"><p class="item-cat">Maratón · Retrato</p><p class="item-title">La Carrera</p></div></div>
-        <div class="pp-item"><img src="img/port-rafting.webp"            alt="Rafting" loading="lazy"><div class="item-grain"></div><div class="pp-overlay"><p class="item-cat">Aventura · Extremo</p><p class="item-title">Aguas Bravas</p></div></div>
+        <div class="pp-item"><img src="img/port-rafting.webp"            alt="Fotograf�a deportes de aventura Chile rafting Araucan�a" loading="lazy"><div class="item-grain"></div><div class="pp-overlay"><p class="item-cat">Aventura · Extremo</p><p class="item-title">Aguas Bravas</p></div></div>
         <div class="pp-item"><img src="img/port-event.webp"               alt="Evento Santiago" loading="lazy"><div class="item-grain"></div><div class="pp-overlay"><p class="item-cat">Evento · Santiago</p><p class="item-title">La Ciudad Corre</p></div></div>
       </div>
       <div class="pp-footer">
@@ -1824,7 +1824,7 @@ footer {
     <!-- ══ 02 BODAS ══ 9 fotos, 3-col grid con hero grande -->
     <div class="port-panel" id="panel-bodas" role="tabpanel">
       <div class="pp-grid pp-grid-3">
-        <div class="pp-item pp-tall"><img src="img/port-wedding.webp"    alt="Beso bajo el velo" loading="lazy"><div class="item-grain"></div><div class="pp-overlay"><p class="item-cat">Boda · Ceremonia</p><p class="item-title">Wedding Stories</p></div></div>
+        <div class="pp-item pp-tall"><img src="img/port-wedding.webp"    alt="Fotograf�a de bodas Santiago ceremonia Johan Alegria" loading="lazy"><div class="item-grain"></div><div class="pp-overlay"><p class="item-cat">Boda · Ceremonia</p><p class="item-title">Wedding Stories</p></div></div>
         <div class="pp-item pp-portrait"><img src="img/gal-boda-2.webp"  alt="Pareja con anillos" loading="lazy"><div class="item-grain"></div><div class="pp-overlay"><p class="item-cat">Boda · Retrato</p><p class="item-title">Los Anillos</p></div></div>
         <div class="pp-item"><img src="img/port-wedding-2.webp"          alt="Pareja feliz" loading="lazy"><div class="item-grain"></div><div class="pp-overlay"><p class="item-cat">Boda · Exterior</p><p class="item-title">La Alegría</p></div></div>
         <div class="pp-item pp-portrait"><img src="img/gal-boda-5.webp"  alt="Pareja editorial B&W" loading="lazy"><div class="item-grain"></div><div class="pp-overlay"><p class="item-cat">Boda · Editorial</p><p class="item-title">El Vuelo</p></div></div>
