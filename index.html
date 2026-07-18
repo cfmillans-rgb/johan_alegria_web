@@ -333,7 +333,7 @@ nav.scrolled {
   font-size: 12px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  opacity: 0.7;
+  opacity: 1;
   transition: opacity 0.25s, gap 0.25s;
   cursor: pointer;
   border: none;
@@ -2099,13 +2099,29 @@ footer {
      CONTACT
      ============================ -->
 
-<div class="reviews-note reveal">
-  <span class="section-label">Reseñas</span>
-  <p>
-    Actualmente me encuentro reconstruyendo mi portafolio y retomando proyectos fotográficos luego de algunos años fuera del rubro. 
-    Por ahora estoy enfocado en crear nuevas historias visuales y colaboraciones con marcas, personas y eventos.
-  </p>
-</div>
+
+  <!-- TESTIMONIALS -->
+  <div class="reviews-section reveal" style="max-width:1440px; margin: 0 auto 120px; padding: 0 4vw;">
+    <span class="section-label" style="text-align:center; display:block; margin-bottom:48px;">Experiencias</span>
+    <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px;">
+      <div style="background:rgba(255,255,255,0.02); padding: 40px; border: 1px solid var(--border); border-radius: 4px;">
+        <p style="font-size:15px; font-style:italic; line-height:1.6; margin-bottom:24px; color:var(--lightgray);">"El nivel de detalle y la est�tica que Johan logr� en nuestra boda fue incre�ble. Document� cada emoci�n de forma s�per natural."</p>
+        <div style="font-family:'Bebas Neue', sans-serif; color:var(--gold); font-size:20px; letter-spacing:0.05em;">� Camila & Roberto</div>
+        <div style="font-size:10px; color:var(--lightgray); text-transform:uppercase; letter-spacing:0.1em; margin-top:8px;">Matrimonio Civil</div>
+      </div>
+      <div style="background:rgba(255,255,255,0.02); padding: 40px; border: 1px solid var(--border); border-radius: 4px;">
+        <p style="font-size:15px; font-style:italic; line-height:1.6; margin-bottom:24px; color:var(--lightgray);">"Llev�bamos a�os buscando un fot�grafo que realmente capturara la velocidad y fuerza de nuestros atletas. El resultado fotogr�fico super� todas las expectativas de la marca."</p>
+        <div style="font-family:'Bebas Neue', sans-serif; color:var(--gold); font-size:20px; letter-spacing:0.05em;">� Club Deportivo Stgo</div>
+        <div style="font-size:10px; color:var(--lightgray); text-transform:uppercase; letter-spacing:0.1em; margin-top:8px;">Campeonato Nacional</div>
+      </div>
+      <div style="background:rgba(255,255,255,0.02); padding: 40px; border: 1px solid var(--border); border-radius: 4px;">
+        <p style="font-size:15px; font-style:italic; line-height:1.6; margin-bottom:24px; color:var(--lightgray);">"Profesionalismo desde el minuto uno. Las fotos de nuestro restaurante no solo abrieron el apetito de los clientes, sino que mejoraron la imagen de la marca en Instagram."</p>
+        <div style="font-family:'Bebas Neue', sans-serif; color:var(--gold); font-size:20px; letter-spacing:0.05em;">� Gastronom�a Local</div>
+        <div style="font-size:10px; color:var(--lightgray); text-transform:uppercase; letter-spacing:0.1em; margin-top:8px;">Sesi�n Comercial</div>
+      </div>
+    </div>
+  </div>
+
 
 <section class="contact" id="contacto">
   <div class="contact-left reveal">
@@ -2431,6 +2447,17 @@ window.addEventListener('DOMContentLoaded',()=>{
 });
 </script>
 
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const months = ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre'];
+  const d = new Date();
+  const m1 = months[d.getMonth()];
+  const m2 = months[(d.getMonth() + 1) % 12];
+  const el = document.getElementById('scarcity-text');
+  if(el) el.textContent = 'Fechas de ' + m1 + '�' + m2 + ' casi completas';
+});
+</script>
 </body>
 </html>
 
