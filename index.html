@@ -1626,6 +1626,16 @@ footer {
 
 </style>
 
+
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#080808">
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js').catch(err => console.log('SW fail: ', err));
+      });
+    }
+  </script>
 </head>
 <body>
   <div id="scroll-progress" style="position:fixed;top:0;left:0;width:0%;height:3px;background:var(--gold);z-index:9999;pointer-events:none;"></div>
