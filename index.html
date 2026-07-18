@@ -27,7 +27,7 @@
 <meta name="twitter:image" content="img/cover.jpg">
 
 <!-- Favicon -->
-<link rel="icon" type="image/webp" href="img/favicon.png">
+<link rel="icon" type="image/png" href="img/favicon.png">
 
 <!-- Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -295,7 +295,7 @@ nav.scrolled {
 
 .hero-sub {
   margin-top: 32px;
-  font-size: 13.5px;
+  font-size: 15px;
   line-height: 1.85;
   color: var(--lightgray);
   max-width: 420px;
@@ -314,7 +314,7 @@ nav.scrolled {
   background: var(--gold);
   color: var(--bg);
   padding: 15px 32px;
-  font-size: 11px;
+  font-size: 12px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   font-family: 'DM Sans', sans-serif;
@@ -331,7 +331,7 @@ nav.scrolled {
   display: inline-flex; align-items: center; gap: 12px;
   background: transparent;
   color: var(--white);
-  font-size: 11px;
+  font-size: 12px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   opacity: 0.7;
@@ -396,7 +396,7 @@ nav.scrolled {
   animation: scrollPulse 2s ease infinite;
 }
 .hero-scroll-text {
-  font-size: 9px;
+  font-size: 10px;
   letter-spacing: 0.35em;
   text-transform: uppercase;
   color: var(--gray);
@@ -444,7 +444,7 @@ nav.scrolled {
   animation: blink 1.8s ease infinite;
 }
 .scarcity-text {
-  font-size: 11px;
+  font-size: 12px;
   letter-spacing: 0.15em;
   color: var(--lightgray);
   text-transform: uppercase;
@@ -469,7 +469,7 @@ nav.scrolled {
    SECTION UTILITIES
    ============================================ */
 .section-label {
-  font-size: 9px;
+  font-size: 10px;
   letter-spacing: 0.5em;
   text-transform: uppercase;
   color: var(--gold);
@@ -513,7 +513,7 @@ nav.scrolled {
 .about-visual-label {
   position: absolute;
   bottom: 32px; left: 32px;
-  font-size: 9px;
+  font-size: 10px;
   letter-spacing: 0.3em;
   text-transform: uppercase;
   color: rgba(255,255,255,0.5);
@@ -540,7 +540,7 @@ nav.scrolled {
   border-left: 2px solid var(--gold);
 }
 .about-body {
-  font-size: 14px;
+  font-size: 15px;
   line-height: 2.0;
   color: var(--lightgray);
   max-width: 420px;
@@ -824,7 +824,7 @@ nav.scrolled {
 
 /* item-cat y item-title: usados en .pp-overlay */
 .item-cat {
-  font-size: 9px;
+  font-size: 10px;
   letter-spacing: 0.3em;
   text-transform: uppercase;
   color: var(--gold);
@@ -919,7 +919,7 @@ nav.scrolled {
   margin-bottom: 32px;
 }
 .story-detail {
-  font-size: 13.5px;
+  font-size: 15px;
   line-height: 1.95;
   color: var(--lightgray);
   margin-bottom: 40px;
@@ -989,7 +989,7 @@ nav.scrolled {
   margin-bottom: 14px;
 }
 .service-desc {
-  font-size: 13px;
+  font-size: 15px;
   line-height: 1.9;
   color: var(--lightgray);
 }
@@ -1043,7 +1043,7 @@ nav.scrolled {
   margin-bottom: 10px;
 }
 .approach-card-desc {
-  font-size: 13px;
+  font-size: 15px;
   line-height: 1.85;
   color: var(--lightgray);
 }
@@ -1062,7 +1062,7 @@ nav.scrolled {
   align-items: start;
 }
 .faq-intro {
-  font-size: 13px;
+  font-size: 15px;
   line-height: 1.9;
   color: var(--lightgray);
   margin-top: 32px;
@@ -1131,10 +1131,35 @@ nav.scrolled {
 }
 .faq-a-inner {
   padding: 0 0 28px;
-  font-size: 14px;
+  font-size: 15px;
   line-height: 1.95;
   color: var(--lightgray);
   max-width: 560px;
+}
+
+/* ============================================
+   REVIEWS NOTE
+   ============================================ */
+.reviews-note {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  padding: 32px 24px;
+  margin: 0 auto 64px;
+  max-width: 800px;
+  border-radius: var(--radius);
+  text-align: center;
+}
+.reviews-note .section-label {
+  display: block;
+  margin-bottom: 16px;
+}
+.reviews-note p {
+  font-size: 15px;
+  line-height: 1.8;
+  color: var(--lightgray);
+}
+@media (max-width: 900px) {
+  .reviews-note { margin: 0 24px 48px; }
 }
 
 /* ============================================
@@ -1165,7 +1190,7 @@ nav.scrolled {
   display: flex; align-items: flex-start; gap: 16px;
 }
 .contact-row-label {
-  font-size: 9px;
+  font-size: 10px;
   letter-spacing: 0.3em;
   text-transform: uppercase;
   color: rgba(0,0,0,0.42);
@@ -1173,7 +1198,7 @@ nav.scrolled {
   padding-top: 2px;
 }
 .contact-row-value {
-  font-size: 14px;
+  font-size: 15px;
   color: var(--bg);
   font-weight: 500;
   border-bottom: 1px solid transparent;
@@ -1205,7 +1230,7 @@ a.contact-row-value:hover { border-color: var(--bg); }
   animation: blink 1.8s ease infinite;
 }
 .contact-scarcity-text {
-  font-size: 11px;
+  font-size: 12px;
   letter-spacing: 0.12em;
   color: var(--lightgray);
 }
@@ -1213,7 +1238,7 @@ a.contact-row-value:hover { border-color: var(--bg); }
 
 .form-group { margin-bottom: 24px; }
 .form-label {
-  font-size: 9px;
+  font-size: 10px;
   letter-spacing: 0.3em;
   text-transform: uppercase;
   color: var(--gray);
@@ -1226,7 +1251,7 @@ a.contact-row-value:hover { border-color: var(--bg); }
   border: none;
   border-bottom: 1px solid rgba(255,255,255,0.1);
   padding: 11px 0;
-  font-size: 14px;
+  font-size: 15px;
   color: var(--white);
   font-family: 'DM Sans', sans-serif;
   font-weight: 300;
@@ -1241,24 +1266,23 @@ a.contact-row-value:hover { border-color: var(--bg); }
 
 .form-submit {
   display: inline-flex; align-items: center; gap: 12px;
-  background: transparent;
-  border: 1px solid rgba(255,255,255,0.15);
-  color: var(--white);
+  background: var(--gold);
+  border: none;
+  color: var(--bg);
   padding: 15px 36px;
-  font-size: 11px;
-  letter-spacing: 0.22em;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
   font-family: 'DM Sans', sans-serif;
   cursor: pointer;
   margin-top: 12px;
-  transition: background 0.28s, color 0.28s, border-color 0.28s, gap 0.28s;
+  transition: background 0.25s, gap 0.25s;
   width: 100%;
   justify-content: center;
 }
 .form-submit:hover {
-  background: var(--gold);
-  color: var(--bg);
-  border-color: var(--gold);
+  background: var(--gold2);
   gap: 18px;
 }
 .form-submit.success {
@@ -1267,7 +1291,7 @@ a.contact-row-value:hover { border-color: var(--bg); }
   color: white;
 }
 .form-note {
-  font-size: 11px;
+  font-size: 12px;
   color: var(--gray);
   margin-top: 14px;
   text-align: center;
@@ -1293,7 +1317,7 @@ footer {
   color: var(--white);
 }
 .footer-copy {
-  font-size: 11px;
+  font-size: 12px;
   color: var(--gray);
   letter-spacing: 0.1em;
 }
@@ -1485,8 +1509,8 @@ footer {
   .pp-item { grid-column: span 1; }
   .port-tab { padding: 0 22px 16px 0; }
   .pt-name { font-size: 18px; }
-  .pt-num { font-size: 9px; }
-  .pp-footer { font-size: 9px; }
+  .pt-num { font-size: 10px; }
+  .pp-footer { font-size: 10px; }
 }
 
 /* ============================================
@@ -1933,28 +1957,28 @@ footer {
   <div class="reveal">
     <p class="section-label">Filosofía</p>
     <h2 class="section-title">Mi<br>Enfoque</h2>
-    <p style="margin-top:28px;font-size:13px;line-height:1.9;color:var(--lightgray);max-width:280px">
+    <p style="margin-top:28px;font-size: 15px;line-height:1.9;color:var(--lightgray);max-width:280px">
       Trabajo desde la anticipación y la lectura del juego para capturar instantes auténticos que muchas veces pasan desapercibidos.
     </p>
   </div>
   <div class="approach-cards">
     <div class="approach-card reveal">
-      <div class="approach-icon">⚡</div>
+      <div class="approach-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg></div>
       <h3 class="approach-card-title">Narrativa Real</h3>
       <p class="approach-card-desc">No intervengo más de lo necesario. Me interesa capturar lo que realmente está pasando: miradas, nervios, silencios, risas.</p>
     </div>
     <div class="approach-card reveal reveal-d1">
-      <div class="approach-icon">🎬</div>
+      <div class="approach-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Z"/><path d="m4 12 4-8"/><path d="m10 12 4-8"/><path d="m16 12 4-8"/><line x1="2" x2="22" y1="12" y2="12"/></svg></div>
       <h3 class="approach-card-title">Estética Cinematográfica</h3>
       <p class="approach-card-desc">Cada encuadre está pensado. La luz, el color y la composición no son casualidad. Busco que cada imagen tenga intención.</p>
     </div>
     <div class="approach-card reveal reveal-d2">
-      <div class="approach-icon">🎯</div>
+      <div class="approach-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></div>
       <h3 class="approach-card-title">Lectura del Juego</h3>
       <p class="approach-card-desc">Anticipo el momento antes de que ocurra. En el deporte, el fotógrafo que espera el momento, ya lo perdió.</p>
     </div>
     <div class="approach-card reveal reveal-d3">
-      <div class="approach-icon">🗺️</div>
+      <div class="approach-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="3 6 9 3 15 6 21 3 21 18 15 21 9 18 3 21"/><line x1="9" x2="9" y1="3" y2="18"/><line x1="15" x2="15" y1="6" y2="21"/></svg></div>
       <h3 class="approach-card-title">Movilidad Total</h3>
       <p class="approach-card-desc">Santiago, Sur y Norte de Chile. Donde esté la acción, ahí estoy. Sin restricciones geográficas para proyectos especiales.</p>
     </div>
@@ -1971,8 +1995,8 @@ footer {
       <p class="section-label">Preguntas frecuentes</p>
       <h2 class="section-title">Todo<br>lo que<br>necesitas<br>saber</h2>
       <p class="faq-intro">Si tienes otra duda, escríbeme directamente por WhatsApp y te respondo al tiro.</p>
-      <a href="https://wa.me/56953235494" target="_blank" style="display:inline-flex;align-items:center;gap:10px;margin-top:28px;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)">
-        💬 WhatsApp →
+      <a href="https://wa.me/56953235494" target="_blank" style="display:inline-flex;align-items:center;gap:10px;margin-top:28px;font-size: 12px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21l1.65-3.8a9 9 0 1 1 3.4 2.9L3 21"/><path d="M9 10a.5.5 0 0 0 1 0V9a.5.5 0 0 0-1 0v1a5 5 0 0 0 5 5h1a.5.5 0 0 0 0-1h-1a.5.5 0 0 0 0 1"/></svg> WhatsApp →
       </a>
     </div>
     <div class="faq-list reveal reveal-d1">
@@ -2130,7 +2154,7 @@ footer {
         <textarea id="mensaje" name="mensaje" class="form-input form-textarea" placeholder="Fecha aproximada, lugar del evento, qué necesitas…"></textarea>
       </div>
       <button type="submit" class="form-submit" id="formSubmit">
-        <span class="whatsapp-icon">💬</span>
+        <span class="whatsapp-icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21l1.65-3.8a9 9 0 1 1 3.4 2.9L3 21"/><path d="M9 10a.5.5 0 0 0 1 0V9a.5.5 0 0 0-1 0v1a5 5 0 0 0 5 5h1a.5.5 0 0 0 0-1h-1a.5.5 0 0 0 0 1"/></svg></span>
         Enviar por WhatsApp
       </button>
       <p class="form-note">Se abrirá WhatsApp con tu mensaje listo para enviar.</p>
@@ -2155,7 +2179,7 @@ footer {
    target="_blank" 
    rel="noopener"
    aria-label="Contactar por WhatsApp">
-  💬
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21l1.65-3.8a9 9 0 1 1 3.4 2.9L3 21"/><path d="M9 10a.5.5 0 0 0 1 0V9a.5.5 0 0 0-1 0v1a5 5 0 0 0 5 5h1a.5.5 0 0 0 0-1h-1a.5.5 0 0 0 0 1"/></svg>
 </a>
 
 <!-- ============================
@@ -2303,7 +2327,7 @@ document.getElementById('contactForm').addEventListener('submit', function(e){
 
   setTimeout(()=>{
     btn.classList.remove('success');
-    btn.innerHTML = '<span class="whatsapp-icon">💬</span> Enviar por WhatsApp';
+    btn.innerHTML = '<span class="whatsapp-icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21l1.65-3.8a9 9 0 1 1 3.4 2.9L3 21"/><path d="M9 10a.5.5 0 0 0 1 0V9a.5.5 0 0 0-1 0v1a5 5 0 0 0 5 5h1a.5.5 0 0 0 0-1h-1a.5.5 0 0 0 0 1"/></svg></span> Enviar por WhatsApp';
     this.reset();
   }, 3500);
 });
@@ -2356,3 +2380,4 @@ window.addEventListener('DOMContentLoaded',()=>{
 
 </body>
 </html>
+
