@@ -440,7 +440,7 @@ nav.scrolled {
 .scarcity-dot {
   width: 8px; height: 8px;
   border-radius: 50%;
-  background: #27ae60;
+  background: var(--gold);
   flex-shrink: 0;
   animation: blink 1.8s ease infinite;
 }
@@ -584,8 +584,7 @@ nav.scrolled {
 .port-head-meta { text-align: right; }
 .port-head-total {
   font-family: 'Bebas Neue', sans-serif;
-  font-size: 64px;
-  color: rgba(255,255,255,0.05);
+  font-size: 48px; color: rgba(255,255,255,0.03);
   line-height: 1;
 }
 .port-head-caption {
@@ -620,8 +619,7 @@ nav.scrolled {
 }
 .port-tab:hover,
 .port-tab.active {
-  background: var(--gold);
-  color: var(--bg);
+  background: var(--bg2); color: var(--gold); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
   border-color: var(--gold);
 }
 /* hide number/count spans — keep them for a11y but visually gone */
@@ -977,8 +975,7 @@ nav.scrolled {
 .service-card:hover .service-bar { width: 56px; }
 .service-num {
   font-family: 'Bebas Neue', sans-serif;
-  font-size: 64px;
-  color: rgba(255,255,255,0.05);
+  font-size: 48px; color: rgba(255,255,255,0.03);
   line-height: 1;
   margin-bottom: 28px;
   transition: color 0.3s;
@@ -2158,7 +2155,7 @@ footer {
     </div>
 
     <p class="section-label">Cuéntame todo</p>
-    <h3 class="section-title" style="font-size:clamp(32px,3.5vw,52px);margin:12px 0 36px">Tu historia<br>merece ser<br>contada.</h3>
+    <h3 class="section-title" style="margin:12px 0 36px">Tu historia<br>merece ser<br>contada.</h3>
 
     <form id="contactForm" novalidate>
       <div class="form-group" style="position:absolute; left:-9999px; top:-9999px;" aria-hidden="true">
@@ -2209,7 +2206,7 @@ footer {
 
 <!-- FOOTER -->
 <footer>
-  <div class="footer-logo">Johan Alegria</div>
+  <div class="footer-logo" style="font-family:'Inter', sans-serif; font-size:16px; letter-spacing:0.1em; color:var(--lightgray); margin-bottom:16px;">JOHAN ALEGRIA STUDIO</div>
   <p class="footer-copy">© 2025 · Fotografía Deportiva · Santiago de Chile</p>
   <div class="footer-links">
     <a href="https://instagram.com/johan_alegria" target="_blank" rel="noopener">Instagram</a>
