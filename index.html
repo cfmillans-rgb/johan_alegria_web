@@ -1589,10 +1589,20 @@ footer {
 .masonry-item img,.gallery-item img,.hero-media img,.hero-media video{transition:transform 1.4s cubic-bezier(.16,1,.3,1),filter .8s ease;will-change:transform;}
 .masonry-item:hover img,.gallery-item:hover img{transform:scale(1.03);filter:blur(.4px) brightness(.92) contrast(1.08);}
 
+
+  @media (prefers-reduced-motion: reduce) {
+    * { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
+  }
+
+  .mobile-call-cta { display: none; }
+  @media (max-width: 768px) {
+    .mobile-call-cta { display: flex; position: fixed; bottom: 24px; left: 24px; background: var(--gold); color: var(--bg); padding: 12px 24px; border-radius: 30px; z-index: 99; font-weight: 500; align-items: center; gap: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.5); text-decoration: none; }
+  }
 </style>
 
 </head>
 <body>
+  <div id="scroll-progress" style="position:fixed;top:0;left:0;width:0%;height:3px;background:var(--gold);z-index:9999;pointer-events:none;"></div>
 <div class="loader-overlay" id="cinematicLoader"><div class="loader-title">JOHAN ALEGRIA</div><div class="loader-line"></div></div>
 
 <!-- CURSOR -->
@@ -2102,16 +2112,19 @@ footer {
     <span class="section-label" style="text-align:center; display:block; margin-bottom:48px;">Experiencias</span>
     <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px;">
       <div style="background:rgba(255,255,255,0.02); padding: 40px; border: 1px solid var(--border); border-radius: 4px;">
+        <div style="width: 48px; height: 48px; background: rgba(255,255,255,0.05); border-radius: 50%; margin-bottom: 24px; border: 1px solid rgba(255,255,255,0.1);"></div>
         <p style="font-size:15px; font-style:italic; line-height:1.6; margin-bottom:24px; color:var(--lightgray);">"El nivel de detalle y la est�tica que Johan logr� en nuestra boda fue incre�ble. Document� cada emoci�n de forma s�per natural."</p>
         <div style="font-family:'Bebas Neue', sans-serif; color:var(--gold); font-size:20px; letter-spacing:0.05em;">� Camila & Roberto</div>
         <div style="font-size:10px; color:var(--lightgray); text-transform:uppercase; letter-spacing:0.1em; margin-top:8px;">Matrimonio Civil</div>
       </div>
       <div style="background:rgba(255,255,255,0.02); padding: 40px; border: 1px solid var(--border); border-radius: 4px;">
+        <div style="width: 48px; height: 48px; background: rgba(255,255,255,0.05); border-radius: 50%; margin-bottom: 24px; border: 1px solid rgba(255,255,255,0.1);"></div>
         <p style="font-size:15px; font-style:italic; line-height:1.6; margin-bottom:24px; color:var(--lightgray);">"Llev�bamos a�os buscando un fot�grafo que realmente capturara la velocidad y fuerza de nuestros atletas. El resultado fotogr�fico super� todas las expectativas de la marca."</p>
         <div style="font-family:'Bebas Neue', sans-serif; color:var(--gold); font-size:20px; letter-spacing:0.05em;">� Club Deportivo Stgo</div>
         <div style="font-size:10px; color:var(--lightgray); text-transform:uppercase; letter-spacing:0.1em; margin-top:8px;">Campeonato Nacional</div>
       </div>
       <div style="background:rgba(255,255,255,0.02); padding: 40px; border: 1px solid var(--border); border-radius: 4px;">
+        <div style="width: 48px; height: 48px; background: rgba(255,255,255,0.05); border-radius: 50%; margin-bottom: 24px; border: 1px solid rgba(255,255,255,0.1);"></div>
         <p style="font-size:15px; font-style:italic; line-height:1.6; margin-bottom:24px; color:var(--lightgray);">"Profesionalismo desde el minuto uno. Las fotos de nuestro restaurante no solo abrieron el apetito de los clientes, sino que mejoraron la imagen de la marca en Instagram."</p>
         <div style="font-family:'Bebas Neue', sans-serif; color:var(--gold); font-size:20px; letter-spacing:0.05em;">� Gastronom�a Local</div>
         <div style="font-size:10px; color:var(--lightgray); text-transform:uppercase; letter-spacing:0.1em; margin-top:8px;">Sesi�n Comercial</div>
@@ -2453,6 +2466,41 @@ document.addEventListener("DOMContentLoaded", function() {
   const m2 = months[(d.getMonth() + 1) % 12];
   const el = document.getElementById('scarcity-text');
   if(el) el.textContent = 'Fechas de ' + m1 + '�' + m2 + ' casi completas';
+});
+</script>
+
+  <a href="#" class="mobile-call-cta secure-phone">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+    Llamar ahora
+  </a>
+
+
+<script>
+window.johanConfig = {
+  startYear: 2019,
+  eventsCovered: 142,
+  igFollowers: '2.4k',
+  basePrice: 150000
+};
+document.addEventListener('DOMContentLoaded', () => {
+  // Update Hero Stats dynamically
+  const currentYear = new Date().getFullYear();
+  const expYears = currentYear - window.johanConfig.startYear;
+  
+  const statNodes = document.querySelectorAll('.hero-stat-num');
+  if(statNodes.length >= 3) {
+    statNodes[0].innerHTML = window.johanConfig.eventsCovered + '<span class="accent">+</span>';
+    statNodes[1].innerHTML = expYears + '<span class="accent">+</span>';
+    statNodes[2].innerHTML = window.johanConfig.igFollowers;
+  }
+  
+  // Progress Bar
+  const pBar = document.getElementById('scroll-progress');
+  window.addEventListener('scroll', () => {
+    const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+    const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    pBar.style.width = (winScroll / height) * 100 + '%';
+  }, {passive:true});
 });
 </script>
 </body>
