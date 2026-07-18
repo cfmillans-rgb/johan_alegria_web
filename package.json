@@ -1,0 +1,24 @@
+{
+  "name": "johan_alegria_web",
+  "version": "1.0.0",
+  "description": "```\r johan_alegria/\r ├── index.html          ← Archivo principal del sitio\r ├── img/                ← Carpeta para TODAS tus imágenes\r │   ├── hero.jpg        ← Foto/video de fondo del hero (horizontal, alta resolución)\r │   ├── about.jpg       ← Tu foto \"detrás de cámara\" (vertical ideal)\r │   ├── story-photo.jpg ← Foto impactante para sección \"Una Foto, Una Historia\"\r │   ├── cover.jpg       ← Imagen para redes sociales / compartir\r │   ├── favicon.png     ← Ícono pequeño del navegador (32x32px)\r │   ├── port-sprint.jpg     ← Portafolio: atletismo\r │   ├── port-chalk.jpg      ← Portafolio: entrenamiento\r │   ├── port-highjump.jpg   ← Portafolio: salto de altura\r │   ├── port-mil-tambores.jpg  ← Portafolio: cultura\r │   ├── port-wedding.jpg    ← Portafolio: boda\r │   ├── port-football.jpg   ← Portafolio: fútbol\r │   └── port-cycling.jpg    ← Portafolio: ciclismo\r └── README.md           ← Este archivo\r ```",
+  "main": "optimize.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cfmillans-rgb/johan_alegria_web.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/cfmillans-rgb/johan_alegria_web/issues"
+  },
+  "homepage": "https://github.com/cfmillans-rgb/johan_alegria_web#readme",
+  "dependencies": {
+    "sharp": "^0.35.3"
+  }
+}
