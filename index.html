@@ -2430,14 +2430,14 @@ document.getElementById('contactForm').addEventListener('submit', function(e){
   }
 
   const texto = [
-    `Hola Johan, vi tu portafolio y me interesa cotizar.`,
+    `Hola Johan, me interesa cotizar un servicio de ${servicio}.`,
     ``,
-    `*Nombre:* ${nombre}`,
-    email ? `*Email:* ${email}` : null,
-    `*Servicio:* ${servicio}`,
-    `*Presupuesto:* ${presupuesto}`,
-    mensaje ? `\n*Detalle:* ${mensaje}` : null,
-  ].filter(Boolean).join('\n');
+    `*Mis datos:*`,
+    `Nombre: ${nombre}`,
+    email ? `Email: ${email}` : null,
+    `Presupuesto: ${presupuesto}`,
+    mensaje ? `Mensaje: ${mensaje}` : null,
+  ].filter(Boolean).join('\r\n');
 
   const wPhone = ["569","5323","5494"].join("");
   const url = `https://wa.me/${wPhone}?text=${encodeURIComponent(texto)}`;
