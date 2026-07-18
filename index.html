@@ -406,7 +406,9 @@ nav.scrolled {
    TICKER
    ============================================ */
 .ticker {
-  background: var(--gold);
+  background: var(--bg2);
+  border-top: 1px solid rgba(212,168,67,0.15);
+  border-bottom: 1px solid rgba(212,168,67,0.15);
   overflow: hidden;
   padding: 11px 0;
   white-space: nowrap;
@@ -417,12 +419,12 @@ nav.scrolled {
 }
 .ticker-item {
   font-family: 'Bebas Neue', sans-serif;
-  font-size: 12px;
+  font-size: 15px;
   letter-spacing: 0.28em;
-  color: var(--bg);
+  color: var(--gold);
   padding: 0 36px;
 }
-.ticker-sep { color: rgba(0,0,0,0.25); padding: 0; }
+.ticker-sep { color: rgba(255,255,255,0.1); padding: 0; }
 
 /* ============================================
    SCARCITY BANNER
@@ -984,7 +986,7 @@ nav.scrolled {
 }
 .service-title {
   font-family: 'Bebas Neue', sans-serif;
-  font-size: 28px;
+  font-size: 42px;
   letter-spacing: 0.04em;
   margin-bottom: 14px;
 }
@@ -1334,10 +1336,10 @@ footer {
 .footer-links a:hover { color: var(--gold); }
 
 /* ============================================
-   FLOATING WHATSAPP (mobile only)
+   FLOATING WHATSAPP
    ============================================ */
 .whatsapp-float {
-  display: none;
+  display: flex;
   position: fixed;
   bottom: 24px; right: 20px;
   z-index: 300;
@@ -1583,8 +1585,9 @@ footer {
 <nav id="mainNav">
   <a href="#" class="nav-logo">Johan Alegria</a>
   <ul class="nav-links">
+    <li><a href="#sobre-mi">Sobre mí</a></li>
     <li><a href="#portfolio">Portafolio</a></li>
-    <li><a href="#historia">Historia</a></li>
+    <li><a href="#historia">El Momento</a></li>
     <li><a href="#servicios">Servicios</a></li>
     <li><a href="#faq">FAQ</a></li>
     <li><a href="#contacto" class="nav-cta">Cotizar</a></li>
@@ -1597,8 +1600,9 @@ footer {
 <!-- MOBILE DRAWER -->
 <div class="nav-drawer" id="navDrawer">
   <button class="nav-close" id="navClose">✕</button>
+  <a href="#sobre-mi" class="drawer-link">Sobre mí</a>
   <a href="#portfolio" class="drawer-link">Portafolio</a>
-  <a href="#historia" class="drawer-link">Historia</a>
+  <a href="#historia" class="drawer-link">El Momento</a>
   <a href="#servicios" class="drawer-link">Servicios</a>
   <a href="#faq" class="drawer-link">FAQ</a>
   <a href="#contacto" class="drawer-link nav-cta">Cotizar</a>
@@ -2141,7 +2145,7 @@ footer {
       </div>
       <div class="form-group">
         <label class="form-label" for="presupuesto">Presupuesto estimado</label>
-        <select id="presupuesto" name="presupuesto" class="form-input" required>
+        <select id="presupuesto" name="presupuesto" class="form-input">
           <option value="">¿Cuál es tu rango?…</option>
           <option value="Básico (hasta $150.000)">Básico — hasta $150.000</option>
           <option value="Estándar ($150.000–$400.000)">Estándar — $150.000–$400.000</option>
@@ -2301,8 +2305,8 @@ document.getElementById('contactForm').addEventListener('submit', function(e){
   const presupuesto= document.getElementById('presupuesto').value;
   const mensaje    = document.getElementById('mensaje').value.trim();
 
-  if(!nombre || !servicio || !presupuesto){
-    alert('Por favor completa los campos obligatorios: nombre, servicio y presupuesto.');
+  if(!nombre || !servicio){
+    alert('Por favor completa los campos obligatorios: nombre y servicio.');
     return;
   }
 
@@ -2364,10 +2368,23 @@ statNums.forEach(el=>{
 
 
 <script>
-window.addEventListener('load',()=>{
- const loader=document.getElementById('cinematicLoader');
- setTimeout(()=>loader.classList.add('hidden'),1200);
-});
+(function() {
+  const loader = document.getElementById('cinematicLoader');
+  const heroImg = document.querySelector('.hero-media img');
+  const hideLoader = () => loader.classList.add('hidden');
+  
+  if (heroImg) {
+    if (heroImg.complete) {
+      hideLoader();
+    } else {
+      heroImg.addEventListener('load', hideLoader);
+      heroImg.addEventListener('error', hideLoader);
+    }
+  } else {
+    window.addEventListener('load', hideLoader);
+  }
+})();
+
 const cinematicObserver=new IntersectionObserver((entries)=>{
  entries.forEach(entry=>{
   if(entry.isIntersecting){entry.target.classList.add('visible');}
