@@ -601,7 +601,7 @@ nav.scrolled {
 /* ── Tab bar (clean filter-btn style) ── */
 .port-tabs {
   display: flex;
-  gap: 5px;
+  gap: 12px;
   position: static;
   margin-bottom: 56px;
   flex-wrap: wrap;
@@ -611,19 +611,25 @@ nav.scrolled {
   font-size: 10px;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  padding: 10px 22px;
-  border: 1px solid rgba(255,255,255,0.1);
-  background: transparent;
+  padding: 10px 24px;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 40px;
+  background: rgba(255,255,255,0.02);
   color: var(--lightgray);
   cursor: pointer;
   font-family: 'DM Sans', sans-serif;
-  transition: all 0.22s;
+  transition: all 0.3s ease;
   outline: none;
 }
-.port-tab:hover,
+.port-tab:hover {
+  background: rgba(255,255,255,0.06);
+  color: var(--white);
+}
 .port-tab.active {
-  background: var(--bg2); color: var(--gold); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+  background: var(--gold);
+  color: var(--bg);
   border-color: var(--gold);
+  font-weight: 500;
 }
 /* hide number/count spans — keep them for a11y but visually gone */
 .pt-num, .pt-count { display: none; }
@@ -1471,9 +1477,8 @@ footer {
   .port-head-meta { text-align: left; }
   .port-tabs { gap: 0; padding-bottom: 2px; flex-wrap: nowrap; overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
   .port-tabs::-webkit-scrollbar { display: none; }
-  .port-tab { flex-shrink: 0; }
-  .port-tab { padding: 0 28px 18px 0; }
-  .pt-name { font-size: 20px; }
+  .port-tab { flex-shrink: 0; padding: 10px 20px; }
+  .pt-name { font-size: 14px; }
   .pt-count { display: none; }
   /* Grid responsivo tablet: 2 items por fila */
   .pp-grid, .pp-grid-3, .pp-grid-5 { grid-auto-rows: 240px; }
@@ -1525,8 +1530,8 @@ footer {
     grid-auto-rows: 190px;
   }
   .pp-item { grid-column: span 1; }
-  .port-tab { padding: 0 22px 16px 0; }
-  .pt-name { font-size: 18px; }
+  .port-tab { padding: 8px 16px; }
+  .pt-name { font-size: 12px; }
   .pt-num { font-size: 10px; }
   .pp-footer { font-size: 10px; }
 }
