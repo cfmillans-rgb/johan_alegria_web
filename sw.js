@@ -1,21 +1,42 @@
-const CACHE_NAME = 'johan-v2';
+const CACHE_NAME = 'johan-v3';
 const urlsToCache = [
   '/',
   '/index.html',
   '/img/hero.webp'
 ];
+
 self.addEventListener('install', event => {
+  self.skipWaiting(); // Force the waiting service worker to become the active service worker.
   event.waitUntil(
     caches.open(CACHE_NAME)
       .then(cache => cache.addAll(urlsToCache))
   );
 });
+
+self.addEventListener('activate', event => {
+  event.waitUntil(
+    caches.keys().then(cacheNames => {
+      return Promise.all(
+        cacheNames.map(cacheName => {
+          if (cacheName !== CACHE_NAME) {
+            return caches.delete(cacheName);
+          }
+        })
+      );
+    }).then(() => self.clients.claim()) // Claim the clients immediately
+  );
+});
+
+// Network-first strategy
 self.addEventListener('fetch', event => {
   event.respondWith(
-    caches.match(event.request)
+    fetch(event.request)
       .then(response => {
-        if (response) return response;
-        return fetch(event.request);
+        // Optionally cache the new response here
+        return response;
+      })
+      .catch(() => {
+        return caches.match(event.request);
       })
   );
 });
