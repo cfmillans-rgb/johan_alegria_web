@@ -876,8 +876,7 @@ nav.scrolled {
    ============================================ */
 .story {
   display: grid;
-  grid-template-columns: 2fr 8fr;
-  padding-left: 10%;
+  grid-template-columns: 4.5fr 5.5fr;
   min-height: 60vh;
   border-top: 1px solid var(--border);
 }
@@ -894,6 +893,17 @@ nav.scrolled {
   transition: transform 0.8s ease;
 }
 .story-photo:hover img { transform: scale(1.03); }
+
+.collage-layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 16px;
+  padding: 60px 0 60px 40px;
+}
+.c-main, .c-sub { overflow: hidden; position: relative; border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.3); }
+.c-main { width: 100%; height: 100%; }
+.c-side { display: flex; flex-direction: column; gap: 16px; }
+.c-sub { width: 100%; flex: 1; }
 .story-photo-fallback {
   width: 100%; height: 100%; min-height: 500px;
   background: linear-gradient(145deg, #1a1a1a, #0f0f0f);
@@ -1436,7 +1446,7 @@ footer {
   .contact { grid-template-columns: 1fr; }
   .contact-left, .contact-right { padding: 60px 32px; }
   .about-visual { min-height: 380px; }
-  .story-photo { min-height: 380px; }
+  .story-photo { min-height: 380px; padding: 40px 24px 0 24px; }
   .about-text, .story-text, .portfolio, .services, .approach, .faq { padding: 60px 32px; }
 }
 
@@ -1505,7 +1515,7 @@ footer {
   .pp-overlay { opacity: 1; }
 
   .story { grid-template-columns: 1fr; padding-left: 0; }
-  .story-photo { min-height: 300px; }
+  .story-photo { min-height: 300px; padding: 40px 24px 0 24px; }
   .story-text { padding: 56px 24px; }
 
   .services { padding: 80px 24px; }
@@ -1980,8 +1990,12 @@ footer {
      STORY: UNA FOTO, UNA HISTORIA
      ============================ -->
 <section class="story" id="historia">
-  <div class="story-photo">
-    <img src="img/story-photo.webp" alt="Historia detrás de la foto" loading="lazy" srcset="img/story-photo-400.webp 400w, img/story-photo-800.webp 800w" sizes="(max-width: 1024px) 100vw, 50vw" width="900" height="600">
+  <div class="story-photo collage-layout">
+    <div class="c-main"><img src="img/story-photo.webp" alt="Preparativos novia" loading="lazy"></div>
+    <div class="c-side">
+      <div class="c-sub"><img src="img/gal-boda-1.webp" alt="Beso ceremonia" loading="lazy"></div>
+      <div class="c-sub"><img src="img/port-wedding-2.webp" alt="Pareja feliz" loading="lazy"></div>
+    </div>
     <div class="story-photo-num">01</div>
   </div>
 
