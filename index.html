@@ -729,8 +729,7 @@ nav.scrolled {
   #panel-deporte .pp-grid .pp-item:nth-child(9)  { grid-column:1/5;   grid-row:4; }
   #panel-deporte .pp-grid .pp-item:nth-child(10) { grid-column:5/9;   grid-row:4; }
   #panel-deporte .pp-grid .pp-item:nth-child(11) { grid-column:9/13;  grid-row:4; }
-  /* Cierre: foto de evento a full-width — remate editorial */
-  #panel-deporte .pp-grid .pp-item:nth-child(12) { grid-column:1/13;  grid-row:5; }
+  /* Cierre eliminado */
 
   /* ── 02 BODAS (8 fotos) ──
      Héroe 7 cols × 2 filas | 4 retratos verticales
@@ -877,8 +876,9 @@ nav.scrolled {
    ============================================ */
 .story {
   display: grid;
-  grid-template-columns: 3fr 7fr;
-  min-height: 65vh;
+  grid-template-columns: 2fr 8fr;
+  padding-left: 10%;
+  min-height: 60vh;
   border-top: 1px solid var(--border);
 }
 .story-photo {
@@ -1219,7 +1219,7 @@ nav.scrolled {
 a.contact-row-value:hover { border-color: var(--bg); color: var(--gold); }
 
 .ig-highlight {
-  background: -webkit-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  background: -webkit-linear-gradient(45deg, #e1306c 0%, #c13584 50%, #833ab4 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: 500;
@@ -1504,7 +1504,7 @@ footer {
   .item-overlay { opacity: 1; }
   .pp-overlay { opacity: 1; }
 
-  .story { grid-template-columns: 1fr; }
+  .story { grid-template-columns: 1fr; padding-left: 0; }
   .story-photo { min-height: 300px; }
   .story-text { padding: 56px 24px; }
 
@@ -1888,10 +1888,10 @@ footer {
         <div class="pp-item"><img src="img/port-football-2.webp"         alt="Remate fútbol" loading="lazy" srcset="img/port-football-2-400.webp 400w, img/port-football-2-800.webp 800w" sizes="(max-width: 480px) 100vw, (max-width: 1024px) 50vw, 33vw" width="900" height="1350"><div class="item-grain"></div><div class="pp-overlay"><p class="item-cat">Fútbol · Acción</p><p class="item-title">Fútbol Puro</p></div></div>
         <div class="pp-item pp-portrait"><img src="img/port-runner.webp" alt="Corredor retrato" loading="lazy" srcset="img/port-runner-400.webp 400w, img/port-runner-800.webp 800w" sizes="(max-width: 480px) 100vw, (max-width: 1024px) 50vw, 33vw" width="900" height="1350"><div class="item-grain"></div><div class="pp-overlay"><p class="item-cat">Maratón · Retrato</p><p class="item-title">La Carrera</p></div></div>
         <div class="pp-item"><img src="img/port-rafting.webp"            alt="Fotografía deportes de aventura Chile rafting Araucanía" loading="lazy" srcset="img/port-rafting-400.webp 400w, img/port-rafting-800.webp 800w, img/port-rafting-1200.webp 1200w" sizes="(max-width: 480px) 100vw, (max-width: 1024px) 50vw, 33vw" width="1399" height="933"><div class="item-grain"></div><div class="pp-overlay"><p class="item-cat">Aventura · Extremo</p><p class="item-title">Aguas Bravas</p></div></div>
-        <div class="pp-item"><img src="img/port-event.webp"               alt="Evento Santiago" loading="lazy" srcset="img/port-event-400.webp 400w, img/port-event-800.webp 800w, img/port-event-1200.webp 1200w" sizes="(max-width: 480px) 100vw, (max-width: 1024px) 50vw, 33vw" width="1399" height="933"><div class="item-grain"></div><div class="pp-overlay"><p class="item-cat">Evento · Santiago</p><p class="item-title">La Ciudad Corre</p></div></div>
+
       </div>
       <div class="pp-footer">
-        <span class="pp-count">13 fotografías · Deporte & Aventura</span>
+        <span class="pp-count">11 fotografías · Deporte & Aventura</span>
         <a href="https://fotop.com/fotos/eventos?evento=230284" target="_blank" rel="noopener" class="pp-cta">Ver archivo en Fotop ↗</a>
       </div>
     </div>
