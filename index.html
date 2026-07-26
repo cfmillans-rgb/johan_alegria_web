@@ -877,11 +877,12 @@ nav.scrolled {
    ============================================ */
 .story {
   display: grid;
-  grid-template-columns: 4.5fr 5.5fr;
+  grid-template-columns: 5.5fr 4.5fr;
   min-height: 60vh;
   border-top: 1px solid var(--border);
 }
 .story-photo {
+  order: 2;
   position: relative;
   overflow: hidden;
   background: var(--bg2);
@@ -921,6 +922,7 @@ nav.scrolled {
   pointer-events: none;
 }
 .story-text {
+  order: 1;
   padding: 96px 80px;
   display: flex; flex-direction: column; justify-content: center;
   background: var(--bg2);
@@ -1517,12 +1519,12 @@ footer {
   .pp-overlay { opacity: 1; }
 
   .story { grid-template-columns: 1fr; padding-left: 0; }
-  .story-photo { min-height: auto; padding: 24px; }
+  .story-photo { order: 1; min-height: auto; padding: 24px; }
   .collage-layout { grid-template-columns: 1fr; padding: 0; gap: 12px; }
   .c-main { height: 360px; }
   .c-side { flex-direction: row; gap: 12px; }
   .c-sub { height: 240px; }
-  .story-text { padding: 40px 24px; }
+  .story-text { order: 2; padding: 40px 24px; }
 
   .services { padding: 80px 24px; }
   .services-grid { grid-template-columns: 1fr 1fr; }
