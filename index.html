@@ -660,6 +660,7 @@ nav.scrolled {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   gap: 10px;
+  grid-auto-flow: dense;
   grid-auto-rows: 260px;
 }
 
@@ -1483,6 +1484,8 @@ footer {
   /* Grid responsivo tablet: 2 items por fila */
   .pp-grid, .pp-grid-3, .pp-grid-5 { grid-auto-rows: 240px; }
   .pp-item { grid-column: span 6; }
+  .pp-item.pp-portrait { grid-row: span 2; }
+  .pp-item.pp-big { grid-column: span 12; grid-row: span 2; }
   .pp-footer { flex-direction: column; align-items: flex-start; gap: 12px; }
   .item-overlay { opacity: 1; }
   .pp-overlay { opacity: 1; }
@@ -1530,6 +1533,8 @@ footer {
     grid-auto-rows: 190px;
   }
   .pp-item { grid-column: span 1; }
+  .pp-item.pp-portrait { grid-row: span 2; }
+  .pp-item.pp-big { grid-column: span 2; grid-row: span 2; }
   .port-tab { padding: 8px 16px; }
   .pt-name { font-size: 12px; }
   .pt-num { font-size: 10px; }
